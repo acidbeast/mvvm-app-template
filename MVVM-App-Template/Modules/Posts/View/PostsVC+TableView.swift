@@ -8,7 +8,12 @@
 import UIKit
 
 
-extension PostsVC: UITableViewDelegate {}
+extension PostsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("show details")
+        //router.showError(title: "1", description: "2", action: nil)
+    }
+}
 
 extension PostsVC: UITableViewDataSource {
     

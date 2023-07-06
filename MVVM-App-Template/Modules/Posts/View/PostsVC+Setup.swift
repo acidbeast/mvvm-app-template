@@ -10,12 +10,7 @@ import UIKit
 extension PostsVC {
     
     func setup() {
-        setupStyle()
         setupTableView()
-    }
-    
-    func setupStyle() {
-        view.backgroundColor = .red
     }
     
     func setupTableView() {
