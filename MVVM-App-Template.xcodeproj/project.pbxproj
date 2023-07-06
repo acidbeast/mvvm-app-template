@@ -18,6 +18,8 @@
 		7AB9493D2A5643B100BD24C0 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9493C2A5643B100BD24C0 /* ModuleBuilder.swift */; };
 		7AB949432A56461500BD24C0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949422A56461500BD24C0 /* MainVC.swift */; };
 		7AB949452A56465600BD24C0 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949442A56465600BD24C0 /* MainVM.swift */; };
+		7AB949472A56565400BD24C0 /* ErrorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949462A56565400BD24C0 /* ErrorVC.swift */; };
+		7AB949492A5656A100BD24C0 /* ErrorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949482A5656A100BD24C0 /* ErrorVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		7AB9493C2A5643B100BD24C0 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		7AB949422A56461500BD24C0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7AB949442A56465600BD24C0 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		7AB949462A56565400BD24C0 /* ErrorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVC.swift; sourceTree = "<group>"; };
+		7AB949482A5656A100BD24C0 /* ErrorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		7AB949402A56449300BD24C0 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				7AB949462A56565400BD24C0 /* ErrorVC.swift */,
+				7AB949482A5656A100BD24C0 /* ErrorVM.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -300,6 +306,8 @@
 				7AB949432A56461500BD24C0 /* MainVC.swift in Sources */,
 				7AB9490A2A56402000BD24C0 /* AppDelegate.swift in Sources */,
 				7AB9493D2A5643B100BD24C0 /* ModuleBuilder.swift in Sources */,
+				7AB949492A5656A100BD24C0 /* ErrorVM.swift in Sources */,
+				7AB949472A56565400BD24C0 /* ErrorVC.swift in Sources */,
 				7AB9490C2A56402000BD24C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

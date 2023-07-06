@@ -14,6 +14,7 @@ protocol RouterProtocol: AnyObject {
 
 protocol MainRouterProtocol: RouterProtocol {
     func start()
+    func showError(title: String, description: String, action: (() -> Void)?)
     func goToRoot()
     func goBack()
 }
@@ -35,6 +36,17 @@ class MainRouter: MainRouterProtocol {
         guard let navigationController = navigationController else { return }
         guard let mainVC = moduleBuilder?.createMainModule(router: self) else { return }
         navigationController.viewControllers = [mainVC]
+    }
+    
+    func showError(title: String, description: String, action: (() -> Void)? = nil) {
+        guard let navigationController = navigationController else { return  }
+        guard let errorVC = moduleBuilder?.createErrorModule(
+            router: self,
+            title: title,
+            description: description,
+            action: action
+        ) else { return }
+        navigationController.pushViewController(errorVC, animated: false)
     }
     
     func goToRoot() {
