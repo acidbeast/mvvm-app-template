@@ -34,8 +34,8 @@ class MainRouter: MainRouterProtocol {
     
     func start() {
         guard let navigationController = navigationController else { return }
-        guard let mainVC = moduleBuilder?.createMainModule(router: self) else { return }
-        navigationController.viewControllers = [mainVC]
+        guard let postsVC = moduleBuilder?.createPostsModule(router: self) else { return }
+        navigationController.viewControllers = [postsVC]
     }
     
     func showError(title: String, description: String, action: (() -> Void)? = nil) {

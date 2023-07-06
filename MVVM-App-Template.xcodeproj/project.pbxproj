@@ -16,10 +16,15 @@
 		7AB9492D2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9492C2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift */; };
 		7AB9493B2A56422B00BD24C0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9493A2A56422B00BD24C0 /* Router.swift */; };
 		7AB9493D2A5643B100BD24C0 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9493C2A5643B100BD24C0 /* ModuleBuilder.swift */; };
-		7AB949432A56461500BD24C0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949422A56461500BD24C0 /* MainVC.swift */; };
-		7AB949452A56465600BD24C0 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949442A56465600BD24C0 /* MainVM.swift */; };
+		7AB949432A56461500BD24C0 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949422A56461500BD24C0 /* PostsVC.swift */; };
+		7AB949452A56465600BD24C0 /* PostsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949442A56465600BD24C0 /* PostsVM.swift */; };
 		7AB949472A56565400BD24C0 /* ErrorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949462A56565400BD24C0 /* ErrorVC.swift */; };
 		7AB949492A5656A100BD24C0 /* ErrorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949482A5656A100BD24C0 /* ErrorVM.swift */; };
+		7AB9494F2A57054D00BD24C0 /* PostsVC+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9494E2A57054D00BD24C0 /* PostsVC+Setup.swift */; };
+		7AB949512A5705E800BD24C0 /* PostsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949502A5705E800BD24C0 /* PostsVC+TableView.swift */; };
+		7AB949532A57073B00BD24C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949522A57073B00BD24C0 /* Post.swift */; };
+		7AB949552A5708F200BD24C0 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949542A5708F200BD24C0 /* PostsService.swift */; };
+		7AB949572A570FBB00BD24C0 /* PostsCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949562A570FBB00BD24C0 /* PostsCellVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +58,15 @@
 		7AB9492C2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_App_TemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AB9493A2A56422B00BD24C0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7AB9493C2A5643B100BD24C0 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
-		7AB949422A56461500BD24C0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		7AB949442A56465600BD24C0 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		7AB949422A56461500BD24C0 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
+		7AB949442A56465600BD24C0 /* PostsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVM.swift; sourceTree = "<group>"; };
 		7AB949462A56565400BD24C0 /* ErrorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVC.swift; sourceTree = "<group>"; };
 		7AB949482A5656A100BD24C0 /* ErrorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVM.swift; sourceTree = "<group>"; };
+		7AB9494E2A57054D00BD24C0 /* PostsVC+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostsVC+Setup.swift"; sourceTree = "<group>"; };
+		7AB949502A5705E800BD24C0 /* PostsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostsVC+TableView.swift"; sourceTree = "<group>"; };
+		7AB949522A57073B00BD24C0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7AB949542A5708F200BD24C0 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		7AB949562A570FBB00BD24C0 /* PostsCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCellVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +117,9 @@
 		7AB949082A56402000BD24C0 /* MVVM-App-Template */ = {
 			isa = PBXGroup;
 			children = (
+				7AB9494A2A57038900BD24C0 /* Services */,
 				7AB9493E2A56446B00BD24C0 /* Modules */,
+				7AB949582A57127C00BD24C0 /* UI */,
 				7AB949092A56402000BD24C0 /* AppDelegate.swift */,
 				7AB9493C2A5643B100BD24C0 /* ModuleBuilder.swift */,
 				7AB9493A2A56422B00BD24C0 /* Router.swift */,
@@ -139,20 +151,20 @@
 		7AB9493E2A56446B00BD24C0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7AB949412A56449900BD24C0 /* Empty */,
 				7AB949402A56449300BD24C0 /* Error */,
-				7AB9493F2A56447400BD24C0 /* Main */,
+				7AB9493F2A56447400BD24C0 /* Posts */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		7AB9493F2A56447400BD24C0 /* Main */ = {
+		7AB9493F2A56447400BD24C0 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				7AB949422A56461500BD24C0 /* MainVC.swift */,
-				7AB949442A56465600BD24C0 /* MainVM.swift */,
+				7AB9494B2A5703A500BD24C0 /* Model */,
+				7AB9494C2A5703AA00BD24C0 /* View */,
+				7AB9494D2A5703AF00BD24C0 /* ViewModel */,
 			);
-			path = Main;
+			path = Posts;
 			sourceTree = "<group>";
 		};
 		7AB949402A56449300BD24C0 /* Error */ = {
@@ -164,11 +176,46 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		7AB949412A56449900BD24C0 /* Empty */ = {
+		7AB9494A2A57038900BD24C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7AB949542A5708F200BD24C0 /* PostsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7AB9494B2A5703A500BD24C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AB949522A57073B00BD24C0 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AB9494C2A5703AA00BD24C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AB949422A56461500BD24C0 /* PostsVC.swift */,
+				7AB9494E2A57054D00BD24C0 /* PostsVC+Setup.swift */,
+				7AB949502A5705E800BD24C0 /* PostsVC+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AB9494D2A5703AF00BD24C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7AB949442A56465600BD24C0 /* PostsVM.swift */,
+				7AB949562A570FBB00BD24C0 /* PostsCellVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AB949582A57127C00BD24C0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Empty;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,13 +349,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB9493B2A56422B00BD24C0 /* Router.swift in Sources */,
-				7AB949452A56465600BD24C0 /* MainVM.swift in Sources */,
-				7AB949432A56461500BD24C0 /* MainVC.swift in Sources */,
+				7AB949532A57073B00BD24C0 /* Post.swift in Sources */,
+				7AB949452A56465600BD24C0 /* PostsVM.swift in Sources */,
+				7AB949432A56461500BD24C0 /* PostsVC.swift in Sources */,
+				7AB949572A570FBB00BD24C0 /* PostsCellVM.swift in Sources */,
+				7AB9494F2A57054D00BD24C0 /* PostsVC+Setup.swift in Sources */,
 				7AB9490A2A56402000BD24C0 /* AppDelegate.swift in Sources */,
 				7AB9493D2A5643B100BD24C0 /* ModuleBuilder.swift in Sources */,
 				7AB949492A5656A100BD24C0 /* ErrorVM.swift in Sources */,
+				7AB949512A5705E800BD24C0 /* PostsVC+TableView.swift in Sources */,
 				7AB949472A56565400BD24C0 /* ErrorVC.swift in Sources */,
 				7AB9490C2A56402000BD24C0 /* SceneDelegate.swift in Sources */,
+				7AB949552A5708F200BD24C0 /* PostsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

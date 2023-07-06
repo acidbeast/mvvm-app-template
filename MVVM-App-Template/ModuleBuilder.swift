@@ -8,15 +8,16 @@
 import UIKit
 
 protocol ModuleBuilderProtocol {
-    func createMainModule(router: MainRouterProtocol) -> UIViewController
+    func createPostsModule(router: MainRouterProtocol) -> UIViewController
     func createErrorModule(router: MainRouterProtocol, title: String, description: String, action: (() -> Void)?) -> UIViewController
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
     
-    func createMainModule(router: MainRouterProtocol) -> UIViewController {
-        let vm = MainVM()
-        let vc = MainVC(
+    func createPostsModule(router: MainRouterProtocol) -> UIViewController {
+        let postService = PostsService()
+        let vm = PostsVM(postsService: postService)
+        let vc = PostsVC(
             router: router,
             viewModel: vm
         )
