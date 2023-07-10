@@ -8,17 +8,17 @@
 import Foundation
 
 protocol PostsServiceProtocol {
-    func getPosts(completion: @escaping (Posts?, Error?) -> Void)
+    func getPosts(completion: @escaping (PostList?, Error?) -> Void)
 }
 
 class PostsService: PostsServiceProtocol {
     
-    func getPosts(completion: @escaping (Posts?, Error?) -> Void) {
+    func getPosts(completion: @escaping (PostList?, Error?) -> Void) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
             do {
-                let posts = try JSONDecoder().decode(Posts.self, from: data)
+                let posts = try JSONDecoder().decode(PostList.self, from: data)
                 completion(posts, error)
             } catch {
                 completion(nil, error)

@@ -5,7 +5,7 @@
 //  Created by Dmitry Shlepkin on 7/6/23.
 //
 
-typealias Posts = [Post]
+typealias PostList = [Post]
 
 struct Post: Codable {
     

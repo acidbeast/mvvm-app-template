@@ -16,8 +16,8 @@ class ModuleBuilder: ModuleBuilderProtocol {
     
     func createPostsModule(router: MainRouterProtocol) -> UIViewController {
         let postService = PostsService()
-        let vm = PostsVM(postsService: postService)
-        let vc = PostsVC(
+        let vm = PostListVM(postsService: postService)
+        let vc = PostListVC(
             router: router,
             viewModel: vm
         )

@@ -5,7 +5,9 @@
 //  Created by Dmitry Shlepkin on 7/6/23.
 //
 
-struct PostsCellVM {
+typealias PostListCellVMs = [PostListCellVM]
+
+struct PostListCellVM {
     var id: Int
     var userId: Int
     var title: String
