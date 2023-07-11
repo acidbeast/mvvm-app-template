@@ -17,8 +17,7 @@ class PostListView: UIView {
     
     var cellsViewModels = PostListCellVMs()
     
-    lazy var testView1 = createTestView1()
-    lazy var testView2 = createTestView2()
+    lazy var loadingView = createLoadingView()
     lazy var tableView = createTableView()
     
     override func layoutSubviews() {
@@ -31,8 +30,10 @@ class PostListView: UIView {
         switch viewData {
         case .initial:
             break
-        case .loading(let loading):
-            addSubview(testView1)
+        case .loading:
+            addSubview(loadingView)
+            setupLoadingView()
+            loadingView.playAnimation()
             break
         case .empty(let empty):
             break

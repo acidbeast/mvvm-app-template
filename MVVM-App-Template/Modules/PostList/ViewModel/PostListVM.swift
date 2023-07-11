@@ -48,12 +48,15 @@ final class PostListVM: PostListVMProtocol {
             guard let posts = posts else { return }
             self?.posts = posts
             self?.createCellsViewModels(posts: posts)
-            self?.updateViewData?(.success(PostListViewData.Data(
-                navigationTitle: "Posts",
-                title: "",
-                description: "",
-                posts: self?.cellsViewModels
-            )))
+            // Delay to show loading screen in case of fast network response
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+                self?.updateViewData?(.success(PostListViewData.Data(
+                    navigationTitle: "Posts",
+                    title: "",
+                    description: "",
+                    posts: self?.cellsViewModels
+                )))
+            }
         }
     }
         

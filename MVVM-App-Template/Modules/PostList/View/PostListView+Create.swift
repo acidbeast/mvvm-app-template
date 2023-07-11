@@ -28,4 +28,8 @@ extension PostListView {
         return tableView
     }
     
+    func createLoadingView() -> LoadingView {
+        return LoadingView()
+    }
+    
 }
