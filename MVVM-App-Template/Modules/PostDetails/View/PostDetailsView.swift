@@ -1,33 +1,31 @@
 //
-//  PostView.swift
+//  PostDetailsView.swift
 //  MVVM-App-Template
 //
-//  Created by Dmitry Shlepkin on 7/10/23.
+//  Created by Dmitry Shlepkin on 7/11/23.
 //
 
 import UIKit
 
-class PostListView: UIView {
+final class PostDetailsView: UIView {
     
-    var viewData: PostListViewData = .initial {
+    var viewData: PostDetailsViewData = .initial {
         didSet {
             setNeedsLayout()
         }
     }
-    var onSelect: ((Int) -> Void)?
-    var cellsViewModels = PostListCellVMs()
     
+    lazy var postFullView = createPostFullView()
     lazy var loadingView = createLoadingView()
     lazy var emptyView = createEmptyView()
     lazy var errorView = createErrorView()
-    lazy var tableView = createTableView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
         update(viewData: viewData)
     }
     
-    private func update(viewData: PostListViewData) {
+    private func update(viewData: PostDetailsViewData) {
         subviews.forEach { $0.removeFromSuperview() }
         switch viewData {
         case .initial:
@@ -50,11 +48,14 @@ class PostListView: UIView {
             }
             break
         case .success(let success):
-            cellsViewModels = success.posts ?? []
-            addSubview(tableView)
-            setupTableView()
+            addSubview(postFullView)
+            setupPostFullView()
+            postFullView.updateWith(
+                title: success.post?.title ?? "",
+                body: success.post?.body ?? ""
+            )
             break
         }
     }
-        
+    
 }

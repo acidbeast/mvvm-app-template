@@ -9,10 +9,9 @@ import UIKit
 
 final class PostListVC: UIViewController {
     
-    var tableView: UITableView!
     var viewModel: PostListVMProtocol
     var router: MainRouterProtocol
-    var postsView = PostListView()
+    var postListView = PostListView()
     
     init(
         router: MainRouterProtocol,
@@ -29,41 +28,27 @@ final class PostListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setup()
-        setupPostsView()
-        updateView()
+        setup(navigationTitle: "Posts")
+        setUpdateViewHander()
+        setViewOnSelectHandler()
         viewModel.getPosts()
-//        viewModel.reloadTableView = {
-//            DispatchQueue.main.async { [weak self] in
-//                print("Done!")
-//                self?.tableView.reloadData()
-//            }
-//        }
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
 //            self.router.showError(title: "Error", description: "Please, try later.", action: nil)
 //        }
     }
     
-    private func setupPostsView() {
-        view.addSubview(postsView)
-        postsView.translatesAutoresizingMaskIntoConstraints = false
-        postsView.backgroundColor = .white
-        NSLayoutConstraint.activate([
-            postsView.topAnchor.constraint(equalTo: view.topAnchor),
-            postsView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            postsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            postsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-    
-    private func updateView() {
+    private func setUpdateViewHander() {
         viewModel.updateViewData = { viewData in
             DispatchQueue.main.async { [weak self, viewData] in
-                print("Done!")
-                self?.postsView.viewData = viewData
+                self?.postListView.viewData = viewData
             }
         }
     }
     
-
+    private func setViewOnSelectHandler() {
+        postListView.onSelect = { [weak self] postId in
+            self?.router.showPostDetails(postId: postId)
+        }
+    }
+    
 }

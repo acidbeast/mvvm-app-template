@@ -9,7 +9,10 @@ import UIKit
     
 extension PostListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //router.showError(title: "1", description: "2", action: nil)
+        let cellVM = cellsViewModels[indexPath.row]
+        if let onSelect = onSelect {
+            onSelect(cellVM.id)
+        }
     }
 }
 
