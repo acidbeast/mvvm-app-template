@@ -18,6 +18,7 @@ class PostListView: UIView {
     var cellsViewModels = PostListCellVMs()
     
     lazy var loadingView = createLoadingView()
+    lazy var emptyView = createEmptyView()
     lazy var tableView = createTableView()
     
     override func layoutSubviews() {
@@ -36,6 +37,9 @@ class PostListView: UIView {
             loadingView.playAnimation()
             break
         case .empty(let empty):
+            addSubview(emptyView)
+            setupEmptyView()
+            emptyView.updateWith(title: empty.title, description: empty.description)
             break
         case .error(let error):
             break

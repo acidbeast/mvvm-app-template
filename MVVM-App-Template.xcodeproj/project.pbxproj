@@ -24,6 +24,7 @@
 		7AB949552A5708F200BD24C0 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949542A5708F200BD24C0 /* PostsService.swift */; };
 		7AB949572A570FBB00BD24C0 /* PostListCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949562A570FBB00BD24C0 /* PostListCellVM.swift */; };
 		7AB9495A2A572CA400BD24C0 /* PostListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949592A572CA400BD24C0 /* PostListViewData.swift */; };
+		7ADAE8FA2A5CF24B00511452 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE8F92A5CF24B00511452 /* EmptyView.swift */; };
 		7AE4CC582A5C5AAF0039A05F /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC572A5C5AAF0039A05F /* PostListView.swift */; };
 		7AE4CC5A2A5C5AE90039A05F /* PostListView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC592A5C5AE90039A05F /* PostListView+Create.swift */; };
 		7AE4CC5C2A5C75CA0039A05F /* PostListView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC5B2A5C75CA0039A05F /* PostListView+TableView.swift */; };
@@ -71,6 +72,7 @@
 		7AB949542A5708F200BD24C0 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		7AB949562A570FBB00BD24C0 /* PostListCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCellVM.swift; sourceTree = "<group>"; };
 		7AB949592A572CA400BD24C0 /* PostListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewData.swift; sourceTree = "<group>"; };
+		7ADAE8F92A5CF24B00511452 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		7AE4CC572A5C5AAF0039A05F /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		7AE4CC592A5C5AE90039A05F /* PostListView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListView+Create.swift"; sourceTree = "<group>"; };
 		7AE4CC5B2A5C75CA0039A05F /* PostListView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListView+TableView.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				7AE4CC5F2A5CC14F0039A05F /* LoadingView.swift */,
 				7AE4CC612A5CC32B0039A05F /* IndicatorView.swift */,
+				7ADAE8F92A5CF24B00511452 /* EmptyView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				7AB9493B2A56422B00BD24C0 /* Router.swift in Sources */,
 				7AE4CC5C2A5C75CA0039A05F /* PostListView+TableView.swift in Sources */,
 				7AE4CC622A5CC32B0039A05F /* IndicatorView.swift in Sources */,
+				7ADAE8FA2A5CF24B00511452 /* EmptyView.swift in Sources */,
 				7AE4CC602A5CC14F0039A05F /* LoadingView.swift in Sources */,
 				7AB949532A57073B00BD24C0 /* Post.swift in Sources */,
 				7AB949452A56465600BD24C0 /* PostListVM.swift in Sources */,

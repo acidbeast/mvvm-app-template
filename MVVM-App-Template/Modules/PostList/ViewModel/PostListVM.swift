@@ -46,6 +46,14 @@ final class PostListVM: PostListVMProtocol {
                 return
             }
             guard let posts = posts else { return }
+            if posts.count == 0 {
+                self?.updateViewData?(.empty(PostListViewData.Data(
+                    navigationTitle: "Posts",
+                    title: "Empty",
+                    description: "Post list is empty.",
+                    posts: self?.cellsViewModels
+                )))
+            }
             self?.posts = posts
             self?.createCellsViewModels(posts: posts)
             // Delay to show loading screen in case of fast network response

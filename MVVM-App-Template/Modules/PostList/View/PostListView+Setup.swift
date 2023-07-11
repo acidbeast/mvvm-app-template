@@ -21,13 +21,22 @@ extension PostListView {
     }
     
     func setupLoadingView() {
-        print("setupLoadingView")
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             loadingView.topAnchor.constraint(equalTo: topAnchor),
             loadingView.bottomAnchor.constraint(equalTo: bottomAnchor),
             loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
             loadingView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
+    func setupEmptyView() {
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            emptyView.topAnchor.constraint(equalTo: topAnchor),
+            emptyView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            emptyView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
     
