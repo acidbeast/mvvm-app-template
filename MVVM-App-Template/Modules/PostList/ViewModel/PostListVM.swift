@@ -39,7 +39,7 @@ final class PostListVM: PostListVMProtocol {
             if (error) != nil {
                 self?.updateViewData?(.error(PostListViewData.Data(
                     navigationTitle: "Posts",
-                    title: "Error",
+                    title: "Network Error",
                     description: "Please try again.",
                     posts: nil
                 )))

@@ -24,4 +24,8 @@ extension PostListView {
         return EmptyView()
     }
     
+    func createErrorView() -> ErrorView {
+        return ErrorView()
+    }
+    
 }

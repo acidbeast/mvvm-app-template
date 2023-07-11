@@ -19,6 +19,7 @@ class PostListView: UIView {
     
     lazy var loadingView = createLoadingView()
     lazy var emptyView = createEmptyView()
+    lazy var errorView = createErrorView()
     lazy var tableView = createTableView()
     
     override func layoutSubviews() {
@@ -42,6 +43,11 @@ class PostListView: UIView {
             emptyView.updateWith(title: empty.title, description: empty.description)
             break
         case .error(let error):
+            addSubview(errorView)
+            setupErrorView()
+            errorView.updateWith (title: error.title) {
+                print("Action")
+            }
             break
         case .success(let success):
             cellsViewModels = success.posts ?? []
