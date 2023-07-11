@@ -20,4 +20,15 @@ extension PostListView {
         ])
     }
     
+    func setupLoadingView() {
+        print("setupLoadingView")
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo: topAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
 }
