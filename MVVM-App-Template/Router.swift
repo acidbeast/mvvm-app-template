@@ -14,12 +14,13 @@ protocol RouterProtocol: AnyObject {
 
 protocol MainRouterProtocol: RouterProtocol {
     func start()
+    func showPostDetails(postId: Int)
     func showError(title: String, description: String, action: (() -> Void)?)
     func goToRoot()
     func goBack()
 }
 
-class MainRouter: MainRouterProtocol {
+final class MainRouter: MainRouterProtocol {
     
     var navigationController: UINavigationController?
     var moduleBuilder: ModuleBuilderProtocol?
@@ -34,8 +35,18 @@ class MainRouter: MainRouterProtocol {
     
     func start() {
         guard let navigationController = navigationController else { return }
-        guard let postsVC = moduleBuilder?.createPostsModule(router: self) else { return }
+        guard let postsVC = moduleBuilder?.createPostListModule(router: self) else { return }
         navigationController.viewControllers = [postsVC]
+    }
+    
+    func showPostDetails(postId: Int) {
+        guard let navigationController = navigationController else { return  }
+        guard let postDetailsVC = moduleBuilder?.createPostDetailsModule(
+            router: self,
+            postId: postId
+        )
+        else { return }
+        navigationController.pushViewController(postDetailsVC, animated: false)
     }
     
     func showError(title: String, description: String, action: (() -> Void)? = nil) {
