@@ -10,7 +10,6 @@ import Foundation
 protocol PostDetailsVMProtocol {
     var updateViewData: ((PostDetailsViewData) -> Void)? { get set }
     func getPost()
-    func getComments()
 }
 
 final class PostDetailsVM: PostDetailsVMProtocol {
@@ -37,8 +36,25 @@ extension PostDetailsVM {
             post: nil,
             comments: nil
         )))
-        postsService.getPost(id: postId) { post, error in
-            guard let post = post else { return }
+        postsService.getPost(id: postId) { [weak self] post, error in
+            if (error) != nil {
+                self?.updateViewData?(.error(PostDetailsViewData.Data(
+                    title: "Network Error",
+                    description: "Try again",
+                    post: nil,
+                    comments: nil
+                )))
+                return
+            }
+            guard let post = post else {
+                self?.updateViewData?(.error(PostDetailsViewData.Data(
+                    title: "Parse Error",
+                    description: "Try again",
+                    post: nil,
+                    comments: nil
+                )))
+                return
+            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
                 self?.updateViewData?(.success(PostDetailsViewData.Data(
                     title: "",
@@ -48,10 +64,6 @@ extension PostDetailsVM {
                 )))
             }
         }
-    }
-    
-    func getComments() {
-        
     }
     
 }

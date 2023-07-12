@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A72576B2A5F0337004F282F /* PostListVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72576A2A5F0337004F282F /* PostListVMTest.swift */; };
+		7A72576D2A5F1B27004F282F /* PostDetailsVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72576C2A5F1B27004F282F /* PostDetailsVMTest.swift */; };
 		7AB9490A2A56402000BD24C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949092A56402000BD24C0 /* AppDelegate.swift */; };
 		7AB9490C2A56402000BD24C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9490B2A56402000BD24C0 /* SceneDelegate.swift */; };
 		7AB949132A56402500BD24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB949122A56402500BD24C0 /* Assets.xcassets */; };
 		7AB949162A56402500BD24C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB949142A56402500BD24C0 /* LaunchScreen.storyboard */; };
-		7AB949212A56402500BD24C0 /* MVVM_App_TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949202A56402500BD24C0 /* MVVM_App_TemplateTests.swift */; };
 		7AB9492B2A56402500BD24C0 /* MVVM_App_TemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9492A2A56402500BD24C0 /* MVVM_App_TemplateUITests.swift */; };
 		7AB9492D2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9492C2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift */; };
 		7AB9493B2A56422B00BD24C0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9493A2A56422B00BD24C0 /* Router.swift */; };
@@ -67,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A72576A2A5F0337004F282F /* PostListVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVMTest.swift; sourceTree = "<group>"; };
+		7A72576C2A5F1B27004F282F /* PostDetailsVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsVMTest.swift; sourceTree = "<group>"; };
 		7AB949062A56402000BD24C0 /* MVVM-App-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-App-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB949092A56402000BD24C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AB9490B2A56402000BD24C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		7AB949152A56402500BD24C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AB949172A56402500BD24C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AB9491C2A56402500BD24C0 /* MVVM-App-TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-App-TemplateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AB949202A56402500BD24C0 /* MVVM_App_TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_App_TemplateTests.swift; sourceTree = "<group>"; };
 		7AB949262A56402500BD24C0 /* MVVM-App-TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-App-TemplateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB9492A2A56402500BD24C0 /* MVVM_App_TemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_App_TemplateUITests.swift; sourceTree = "<group>"; };
 		7AB9492C2A56402500BD24C0 /* MVVM_App_TemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_App_TemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -179,7 +181,8 @@
 		7AB9491F2A56402500BD24C0 /* MVVM-App-TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				7AB949202A56402500BD24C0 /* MVVM_App_TemplateTests.swift */,
+				7A72576A2A5F0337004F282F /* PostListVMTest.swift */,
+				7A72576C2A5F1B27004F282F /* PostDetailsVMTest.swift */,
 			);
 			path = "MVVM-App-TemplateTests";
 			sourceTree = "<group>";
@@ -520,7 +523,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB949212A56402500BD24C0 /* MVVM_App_TemplateTests.swift in Sources */,
+				7A72576B2A5F0337004F282F /* PostListVMTest.swift in Sources */,
+				7A72576D2A5F1B27004F282F /* PostDetailsVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

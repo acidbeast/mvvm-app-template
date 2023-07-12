@@ -28,16 +28,6 @@ extension PostDetailsView {
         ])
     }
     
-    func setupEmptyView() {
-        emptyView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            emptyView.topAnchor.constraint(equalTo: topAnchor),
-            emptyView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            emptyView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            emptyView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-    }
-    
     func setupErrorView() {
         errorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
