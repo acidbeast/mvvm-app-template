@@ -43,10 +43,11 @@ final class ModuleBuilder: ModuleBuilderProtocol {
             title: title,
             description: description
         )
-        let vc = ErrorVC()
-        vc.action = action
-        vc.viewModel = vm
-        vc.router = router
+        let vc = ErrorVC(
+            router: router,
+            viewModel: vm,
+            action: action
+        )
         return vc
     }
     
