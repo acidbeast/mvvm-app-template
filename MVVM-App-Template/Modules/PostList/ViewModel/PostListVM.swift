@@ -40,12 +40,20 @@ final class PostListVM: PostListVMProtocol {
                 self?.updateViewData?(.error(PostListViewData.Data(
                     navigationTitle: "Posts",
                     title: "Network Error",
-                    description: "Please try again.",
+                    description: "Try again",
                     posts: nil
                 )))
                 return
             }
-            guard let posts = posts else { return }
+            guard let posts = posts else {
+                self?.updateViewData?(.error(PostListViewData.Data(
+                    navigationTitle: "Posts",
+                    title: "Parse Error",
+                    description: "Try again",
+                    posts: nil
+                )))
+                return
+            }
             if posts.count == 0 {
                 self?.updateViewData?(.empty(PostListViewData.Data(
                     navigationTitle: "Posts",

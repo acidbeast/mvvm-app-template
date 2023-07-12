@@ -18,10 +18,6 @@ extension PostDetailsView {
         return LoadingView()
     }
     
-    func createEmptyView() -> EmptyView {
-        return EmptyView()
-    }
-    
     func createErrorView() -> ErrorView {
         return ErrorView()
     }

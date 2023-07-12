@@ -17,7 +17,6 @@ final class PostDetailsView: UIView {
     
     lazy var postFullView = createPostFullView()
     lazy var loadingView = createLoadingView()
-    lazy var emptyView = createEmptyView()
     lazy var errorView = createErrorView()
     
     override func layoutSubviews() {
@@ -34,11 +33,6 @@ final class PostDetailsView: UIView {
             addSubview(loadingView)
             setupLoadingView()
             loadingView.playAnimation()
-            break
-        case .empty(let empty):
-            addSubview(emptyView)
-            setupEmptyView()
-            emptyView.updateWith(title: empty.title, description: empty.description)
             break
         case .error(let error):
             addSubview(errorView)

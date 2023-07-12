@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum PostListViewData {
+enum PostListViewData: Equatable {
+
+    
     
     case initial
     case loading(Data)
@@ -20,6 +22,23 @@ enum PostListViewData {
         let title: String
         let description: String
         let posts: PostListCellVMs?
+    }
+    
+    static func == (lhs: PostListViewData, rhs: PostListViewData) -> Bool {
+        switch (lhs, rhs) {
+        case (.initial, .initial):
+            return true
+        case (.loading, .loading):
+            return true
+        case (.empty, .empty):
+            return true
+        case (.success, .success):
+            return true
+        case ( .error, .error):
+            return true
+        default:
+            return false
+        }
     }
     
 }
