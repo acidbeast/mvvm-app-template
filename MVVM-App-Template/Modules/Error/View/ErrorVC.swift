@@ -35,6 +35,11 @@ final class ErrorVC: UIViewController {
         viewModel.update()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
 }
 
 extension ErrorVC {

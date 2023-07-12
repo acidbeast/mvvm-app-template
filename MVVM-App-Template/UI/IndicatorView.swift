@@ -32,7 +32,7 @@ private extension IndicatorView {
         setupAnimations()
     }
     
-    func setupConstrains() {
+    private func setupConstrains() {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: 65),
@@ -40,7 +40,7 @@ private extension IndicatorView {
         ])
     }
     
-    func setupCircles() {
+    private func setupCircles() {
         for i in 0...2 {
             let circleView = UIView()
             addSubview(circleView)

@@ -10,12 +10,12 @@ protocol ErrorVMProtocol: AnyObject {
     func update()
 }
 
-class ErrorVM: ErrorVMProtocol {
+final class ErrorVM: ErrorVMProtocol {
     
     public var updateViewData: ((ErrorViewData) -> Void)?
     
-    var title: String
-    var description: String
+    private var title: String
+    private var description: String
     
     init (
         title: String,

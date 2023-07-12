@@ -18,7 +18,6 @@ enum PostListViewData: Equatable {
     case error(Data)
     
     struct Data {
-        let navigationTitle: String
         let title: String
         let description: String
         let posts: PostListCellVMs?

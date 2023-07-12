@@ -30,7 +30,6 @@ final class PostListVM: PostListVMProtocol {
     
     func getPosts() {
         updateViewData?(.loading(PostListViewData.Data(
-            navigationTitle: "Posts",
             title: "Loading",
             description: "Please wait.",
             posts: nil
@@ -38,7 +37,6 @@ final class PostListVM: PostListVMProtocol {
         postsService.getPosts { [weak self] posts, error in
             if (error) != nil {
                 self?.updateViewData?(.error(PostListViewData.Data(
-                    navigationTitle: "Posts",
                     title: "Network Error",
                     description: "Try again",
                     posts: nil
@@ -47,7 +45,6 @@ final class PostListVM: PostListVMProtocol {
             }
             guard let posts = posts else {
                 self?.updateViewData?(.error(PostListViewData.Data(
-                    navigationTitle: "Posts",
                     title: "Parse Error",
                     description: "Try again",
                     posts: nil
@@ -56,7 +53,6 @@ final class PostListVM: PostListVMProtocol {
             }
             if posts.count == 0 {
                 self?.updateViewData?(.empty(PostListViewData.Data(
-                    navigationTitle: "Posts",
                     title: "Empty",
                     description: "Post list is empty.",
                     posts: self?.cellsViewModels
@@ -67,7 +63,6 @@ final class PostListVM: PostListVMProtocol {
             // Delay to show loading screen in case of fast network response
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
                 self?.updateViewData?(.success(PostListViewData.Data(
-                    navigationTitle: "Posts",
                     title: "",
                     description: "",
                     posts: self?.cellsViewModels

@@ -8,7 +8,7 @@
 import UIKit
 
 
-class LoadingView: UIView {
+final class LoadingView: UIView {
     
     let textLabel = UILabel()
     let indicatorView = IndicatorView()
@@ -33,7 +33,7 @@ private extension LoadingView {
         setupLoaderView()
     }
         
-    func setupTextLabelView() {
+    private func setupTextLabelView() {
         addSubview(textLabel)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         textLabel.text = "LOADING"
@@ -45,7 +45,7 @@ private extension LoadingView {
         ])
     }
     
-    func setupLoaderView() {
+    private func setupLoaderView() {
         addSubview(indicatorView)
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
