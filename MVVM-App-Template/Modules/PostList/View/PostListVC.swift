@@ -36,11 +36,10 @@ final class PostListVC: UIViewController {
         /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             self?.router.showError(title: "Error", description: "Please, try later.") { [weak self] in
-                self?.navigationController?.isNavigationBarHidden = false
                 self?.router.goBack()
             }
         }
-        */
+         */
     }
     
     private func setUpdateViewHander() {

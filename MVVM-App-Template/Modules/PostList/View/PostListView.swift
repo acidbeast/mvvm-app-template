@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostListView: UIView {
+final class PostListView: UIView {
     
     var viewData: PostListViewData = .initial {
         didSet {

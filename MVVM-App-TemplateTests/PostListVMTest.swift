@@ -71,7 +71,6 @@ final class PostListVMTests: XCTestCase {
     
     override func setUpWithError() throws {
         postViewDataMock = PostListViewData.Data(
-            navigationTitle: "",
             title: "",
             description: "",
             posts: nil
