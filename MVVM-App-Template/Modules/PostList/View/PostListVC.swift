@@ -32,9 +32,15 @@ final class PostListVC: UIViewController {
         setUpdateViewHander()
         setViewOnSelectHandler()
         viewModel.getPosts()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            self.router.showError(title: "Error", description: "Please, try later.", action: nil)
-//        }
+        // Go to error screen
+        /*
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.router.showError(title: "Error", description: "Please, try later.") { [weak self] in
+                self?.navigationController?.isNavigationBarHidden = false
+                self?.router.goBack()
+            }
+        }
+        */
     }
     
     private func setUpdateViewHander() {

@@ -114,12 +114,14 @@ extension ErrorView {
     func updateWith(title titleText: String, buttonAction: (() -> Void)?) {
         self.titleLabelText = titleText
         self.buttonAction = buttonAction
+        setupButton()
     }
     
     func updateWith(title titleText: String, buttonText: String, buttonAction: (() -> Void)?) {
         self.titleLabelText = titleText
         self.buttonText = buttonText
         self.buttonAction = buttonAction
+        setupButton()
     }
     
 }
