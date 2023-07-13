@@ -15,43 +15,25 @@ extension PostListView {
     }
             
     func setupTableView() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        addSubview(tableView)
+        tableView.pin(to: self)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func setupLoadingView() {
-        loadingView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            loadingView.topAnchor.constraint(equalTo: topAnchor),
-            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        addSubview(loadingView)
+        loadingView.pin(to: self)
     }
     
     func setupEmptyView() {
-        emptyView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            emptyView.topAnchor.constraint(equalTo: topAnchor),
-            emptyView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            emptyView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            emptyView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        addSubview(emptyView)
+        emptyView.pin(to: self)
     }
     
     func setupErrorView() {
-        errorView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            errorView.topAnchor.constraint(equalTo: topAnchor),
-            errorView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            errorView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            errorView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        addSubview(errorView)
+        errorView.pin(to: self)
     }
     
 }

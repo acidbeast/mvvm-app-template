@@ -24,14 +24,8 @@ extension PostDetailsVC {
     
     private func setupPostFullView() {
         view.addSubview(postDetailsView)
-        postDetailsView.translatesAutoresizingMaskIntoConstraints = false
-        postDetailsView.backgroundColor = .white
-        NSLayoutConstraint.activate([
-            postDetailsView.topAnchor.constraint(equalTo: view.topAnchor),
-            postDetailsView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            postDetailsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            postDetailsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        view.backgroundColor = .white
+        postDetailsView.pinWithSafeArea(to: view)
     }
     
 }

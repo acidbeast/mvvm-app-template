@@ -17,10 +17,10 @@ final class PostListView: UIView {
     var onSelect: ((Int) -> Void)?
     var cellsViewModels = PostListCellVMs()
     
-    lazy var loadingView = createLoadingView()
-    lazy var emptyView = createEmptyView()
-    lazy var errorView = createErrorView()
-    lazy var tableView = createTableView()
+    lazy var loadingView = LoadingView()
+    lazy var emptyView = EmptyView()
+    lazy var errorView = ErrorView()
+    lazy var tableView = UITableView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -33,17 +33,14 @@ final class PostListView: UIView {
         case .initial:
             break
         case .loading:
-            addSubview(loadingView)
             setupLoadingView()
             loadingView.playAnimation()
             break
         case .empty(let empty):
-            addSubview(emptyView)
             setupEmptyView()
             emptyView.updateWith(title: empty.title, description: empty.description)
             break
         case .error(let error):
-            addSubview(errorView)
             setupErrorView()
             errorView.updateWith (title: error.title) {
                 print("Action")
@@ -51,7 +48,6 @@ final class PostListView: UIView {
             break
         case .success(let success):
             cellsViewModels = success.posts ?? []
-            addSubview(tableView)
             setupTableView()
             break
         }

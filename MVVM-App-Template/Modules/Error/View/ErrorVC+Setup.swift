@@ -17,13 +17,7 @@ extension ErrorVC {
     
     private func setupErrorView() {
         view.addSubview(errorContainerView)
-        errorContainerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            errorContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            errorContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            errorContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            errorContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        errorContainerView.pinWithSafeArea(to: view)
     }
     
 }
