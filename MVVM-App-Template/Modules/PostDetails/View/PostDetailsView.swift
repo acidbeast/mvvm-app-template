@@ -15,9 +15,9 @@ final class PostDetailsView: UIView {
         }
     }
     
-    lazy var postFullView = createPostFullView()
-    lazy var loadingView = createLoadingView()
-    lazy var errorView = createErrorView()
+    lazy var postFullView = PostFullView()
+    lazy var loadingView = LoadingView()
+    lazy var errorView = ErrorView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -30,19 +30,16 @@ final class PostDetailsView: UIView {
         case .initial:
             break
         case .loading:
-            addSubview(loadingView)
             setupLoadingView()
             loadingView.playAnimation()
             break
         case .error(let error):
-            addSubview(errorView)
             setupErrorView()
             errorView.updateWith (title: error.title) {
                 print("Action")
             }
             break
         case .success(let success):
-            addSubview(postFullView)
             setupPostFullView()
             postFullView.updateWith(
                 title: success.post?.title ?? "",

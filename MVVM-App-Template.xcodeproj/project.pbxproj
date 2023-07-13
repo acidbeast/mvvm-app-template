@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7A72576B2A5F0337004F282F /* PostListVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72576A2A5F0337004F282F /* PostListVMTest.swift */; };
 		7A72576D2A5F1B27004F282F /* PostDetailsVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72576C2A5F1B27004F282F /* PostDetailsVMTest.swift */; };
+		7A7257702A5F9376004F282F /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72576F2A5F9376004F282F /* Constraints.swift */; };
+		7A7257722A5F93BC004F282F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7257712A5F93BC004F282F /* UIView.swift */; };
 		7AB9490A2A56402000BD24C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB949092A56402000BD24C0 /* AppDelegate.swift */; };
 		7AB9490C2A56402000BD24C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9490B2A56402000BD24C0 /* SceneDelegate.swift */; };
 		7AB949132A56402500BD24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB949122A56402500BD24C0 /* Assets.xcassets */; };
@@ -34,16 +36,12 @@
 		7ADAE90A2A5DCEE700511452 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE9092A5DCEE700511452 /* PostDetailsView.swift */; };
 		7ADAE90C2A5DD04C00511452 /* PostListVC+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE90B2A5DD04C00511452 /* PostListVC+Setup.swift */; };
 		7ADAE90E2A5E0E8D00511452 /* PostFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE90D2A5E0E8D00511452 /* PostFullView.swift */; };
-		7ADAE9102A5E107A00511452 /* PostDetailsView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE90F2A5E107A00511452 /* PostDetailsView+Create.swift */; };
 		7ADAE9122A5E108600511452 /* PostDetailsView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE9112A5E108600511452 /* PostDetailsView+Setup.swift */; };
 		7ADAE9142A5E139D00511452 /* PostDetailsVC+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE9132A5E139D00511452 /* PostDetailsVC+Setup.swift */; };
 		7ADAE9192A5E34B000511452 /* ErrorViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE9182A5E34B000511452 /* ErrorViewData.swift */; };
 		7ADAE91B2A5E432000511452 /* ErrorVC+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE91A2A5E432000511452 /* ErrorVC+Setup.swift */; };
 		7ADAE91D2A5E4A2F00511452 /* ErrorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE91C2A5E4A2F00511452 /* ErrorContainerView.swift */; };
-		7ADAE91F2A5E4C0500511452 /* ErrorContainerView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE91E2A5E4C0500511452 /* ErrorContainerView+Create.swift */; };
-		7ADAE9212A5E4C0D00511452 /* ErrorContainerView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAE9202A5E4C0D00511452 /* ErrorContainerView+Setup.swift */; };
 		7AE4CC582A5C5AAF0039A05F /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC572A5C5AAF0039A05F /* PostListView.swift */; };
-		7AE4CC5A2A5C5AE90039A05F /* PostListView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC592A5C5AE90039A05F /* PostListView+Create.swift */; };
 		7AE4CC5C2A5C75CA0039A05F /* PostListView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC5B2A5C75CA0039A05F /* PostListView+TableView.swift */; };
 		7AE4CC5E2A5C780B0039A05F /* PostListView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC5D2A5C780B0039A05F /* PostListView+Setup.swift */; };
 		7AE4CC602A5CC14F0039A05F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4CC5F2A5CC14F0039A05F /* LoadingView.swift */; };
@@ -70,6 +68,8 @@
 /* Begin PBXFileReference section */
 		7A72576A2A5F0337004F282F /* PostListVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVMTest.swift; sourceTree = "<group>"; };
 		7A72576C2A5F1B27004F282F /* PostDetailsVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsVMTest.swift; sourceTree = "<group>"; };
+		7A72576F2A5F9376004F282F /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		7A7257712A5F93BC004F282F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7AB949062A56402000BD24C0 /* MVVM-App-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-App-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB949092A56402000BD24C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AB9490B2A56402000BD24C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,16 +99,12 @@
 		7ADAE9092A5DCEE700511452 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		7ADAE90B2A5DD04C00511452 /* PostListVC+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListVC+Setup.swift"; sourceTree = "<group>"; };
 		7ADAE90D2A5E0E8D00511452 /* PostFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullView.swift; sourceTree = "<group>"; };
-		7ADAE90F2A5E107A00511452 /* PostDetailsView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDetailsView+Create.swift"; sourceTree = "<group>"; };
 		7ADAE9112A5E108600511452 /* PostDetailsView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDetailsView+Setup.swift"; sourceTree = "<group>"; };
 		7ADAE9132A5E139D00511452 /* PostDetailsVC+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDetailsVC+Setup.swift"; sourceTree = "<group>"; };
 		7ADAE9182A5E34B000511452 /* ErrorViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewData.swift; sourceTree = "<group>"; };
 		7ADAE91A2A5E432000511452 /* ErrorVC+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorVC+Setup.swift"; sourceTree = "<group>"; };
 		7ADAE91C2A5E4A2F00511452 /* ErrorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorContainerView.swift; sourceTree = "<group>"; };
-		7ADAE91E2A5E4C0500511452 /* ErrorContainerView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorContainerView+Create.swift"; sourceTree = "<group>"; };
-		7ADAE9202A5E4C0D00511452 /* ErrorContainerView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorContainerView+Setup.swift"; sourceTree = "<group>"; };
 		7AE4CC572A5C5AAF0039A05F /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
-		7AE4CC592A5C5AE90039A05F /* PostListView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListView+Create.swift"; sourceTree = "<group>"; };
 		7AE4CC5B2A5C75CA0039A05F /* PostListView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListView+TableView.swift"; sourceTree = "<group>"; };
 		7AE4CC5D2A5C780B0039A05F /* PostListView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListView+Setup.swift"; sourceTree = "<group>"; };
 		7AE4CC5F2A5CC14F0039A05F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -140,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A72576E2A5F9367004F282F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7A72576F2A5F9376004F282F /* Constraints.swift */,
+				7A7257712A5F93BC004F282F /* UIView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		7AB948FD2A56402000BD24C0 = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +254,6 @@
 				7AB949422A56461500BD24C0 /* PostListVC.swift */,
 				7ADAE90B2A5DD04C00511452 /* PostListVC+Setup.swift */,
 				7AE4CC572A5C5AAF0039A05F /* PostListView.swift */,
-				7AE4CC592A5C5AE90039A05F /* PostListView+Create.swift */,
 				7AE4CC5D2A5C780B0039A05F /* PostListView+Setup.swift */,
 				7AE4CC5B2A5C75CA0039A05F /* PostListView+TableView.swift */,
 			);
@@ -301,7 +305,6 @@
 				7ADAE9052A5DC4E800511452 /* PostDetailsVC.swift */,
 				7ADAE9132A5E139D00511452 /* PostDetailsVC+Setup.swift */,
 				7ADAE9092A5DCEE700511452 /* PostDetailsView.swift */,
-				7ADAE90F2A5E107A00511452 /* PostDetailsView+Create.swift */,
 				7ADAE9112A5E108600511452 /* PostDetailsView+Setup.swift */,
 				7ADAE90D2A5E0E8D00511452 /* PostFullView.swift */,
 			);
@@ -330,8 +333,6 @@
 				7AB949462A56565400BD24C0 /* ErrorVC.swift */,
 				7ADAE91A2A5E432000511452 /* ErrorVC+Setup.swift */,
 				7ADAE91C2A5E4A2F00511452 /* ErrorContainerView.swift */,
-				7ADAE91E2A5E4C0500511452 /* ErrorContainerView+Create.swift */,
-				7ADAE9202A5E4C0D00511452 /* ErrorContainerView+Setup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +348,7 @@
 		7AE4CC632A5CC3650039A05F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7A72576E2A5F9367004F282F /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,9 +484,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE4CC5E2A5C780B0039A05F /* PostListView+Setup.swift in Sources */,
-				7AE4CC5A2A5C5AE90039A05F /* PostListView+Create.swift in Sources */,
 				7AB9493B2A56422B00BD24C0 /* Router.swift in Sources */,
 				7AE4CC5C2A5C75CA0039A05F /* PostListView+TableView.swift in Sources */,
+				7A7257722A5F93BC004F282F /* UIView.swift in Sources */,
+				7A7257702A5F9376004F282F /* Constraints.swift in Sources */,
 				7AE4CC622A5CC32B0039A05F /* IndicatorView.swift in Sources */,
 				7ADAE8FA2A5CF24B00511452 /* EmptyView.swift in Sources */,
 				7AE4CC602A5CC14F0039A05F /* LoadingView.swift in Sources */,
@@ -500,20 +503,17 @@
 				7AB949572A570FBB00BD24C0 /* PostListCellVM.swift in Sources */,
 				7ADAE91D2A5E4A2F00511452 /* ErrorContainerView.swift in Sources */,
 				7AB9490A2A56402000BD24C0 /* AppDelegate.swift in Sources */,
-				7ADAE9212A5E4C0D00511452 /* ErrorContainerView+Setup.swift in Sources */,
 				7AB9493D2A5643B100BD24C0 /* ModuleBuilder.swift in Sources */,
 				7ADAE90C2A5DD04C00511452 /* PostListVC+Setup.swift in Sources */,
 				7ADAE9062A5DC4E800511452 /* PostDetailsVC.swift in Sources */,
 				7AB949492A5656A100BD24C0 /* ErrorVM.swift in Sources */,
 				7ADAE8FC2A5DAFA100511452 /* ErrorView.swift in Sources */,
 				7AB949472A56565400BD24C0 /* ErrorVC.swift in Sources */,
-				7ADAE9102A5E107A00511452 /* PostDetailsView+Create.swift in Sources */,
 				7AB9490C2A56402000BD24C0 /* SceneDelegate.swift in Sources */,
 				7ADAE9042A5DC44900511452 /* PostDetailsViewData.swift in Sources */,
 				7ADAE9192A5E34B000511452 /* ErrorViewData.swift in Sources */,
 				7ADAE9082A5DC55900511452 /* PostDetailsVM.swift in Sources */,
 				7AE4CC582A5C5AAF0039A05F /* PostListView.swift in Sources */,
-				7ADAE91F2A5E4C0500511452 /* ErrorContainerView+Create.swift in Sources */,
 				7ADAE90E2A5E0E8D00511452 /* PostFullView.swift in Sources */,
 				7AB949552A5708F200BD24C0 /* PostsService.swift in Sources */,
 			);

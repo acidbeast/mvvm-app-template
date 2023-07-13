@@ -15,7 +15,7 @@ final class ErrorContainerView: UIView {
         }
     }
 
-    lazy var errorView = createErrorView()
+    lazy var errorView = ErrorView()
     
     private var action: (()->Void)?
 
@@ -40,7 +40,7 @@ final class ErrorContainerView: UIView {
             break
         case .success(let success):
             addSubview(errorView)
-            setupErrorView()
+            errorView.pin(to: self)
             errorView.updateWith(title: success.title, buttonAction: self.action)
             break
         }
